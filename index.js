@@ -127,6 +127,10 @@ app.get('/dashboard', (req, res) => {
     res.render('dashboard', { user: req.session.username });
 });
 
+app.get('/', (req, res) => {
+    res.redirect('/register');
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
